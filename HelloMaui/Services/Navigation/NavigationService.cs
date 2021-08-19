@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Controls;
+﻿using HelloMaui.Pages;
+using Microsoft.Maui.Controls;
 
 namespace HelloMaui.Services.Navigation
 {
@@ -18,9 +19,15 @@ namespace HelloMaui.Services.Navigation
             return CurrentPage.Navigation.PopAsync();
         }
 
-        public Task NavigateAsync(Type pageType)
+        public Task NavigateAsync(Type pageType, object parameter = null)
         {
             Page target = Activator.CreateInstance(pageType) as Page;
+
+            if (parameter != null
+                && target is BaseContentPage contentPage)
+            {
+                contentPage.SendParameter(parameter);
+            }
 
             return CurrentPage.Navigation.PushAsync(target);
         }

@@ -2,9 +2,9 @@
 using HelloMaui.ViewModels;
 using Microsoft.Maui.Controls;
 
-namespace HelloMaui.Views
+namespace HelloMaui.Pages
 {
-    public partial class RegisterPage : ContentPage
+    public partial class RegisterPage : BaseContentPage
     {
         public RegisterPage()
         {

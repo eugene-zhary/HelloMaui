@@ -1,9 +1,10 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewModels="clr-namespace:HelloMaui.ViewModels"
-             x:Class="HelloMaui.Views.HomePage"
-             BackgroundColor="{DynamicResource PageBackgroundColor}"
-             Title="{Binding Title}">
+<pages:BaseContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:pages="clr-namespace:HelloMaui.Pages"
+                       xmlns:viewModels="clr-namespace:HelloMaui.ViewModels"
+                       x:Class="HelloMaui.Pages.HomePage"
+                       BackgroundColor="{DynamicResource PageBackgroundColor}"
+                       Title="{Binding Title}">
 
     <StackLayout>
 
@@ -12,5 +13,5 @@
                 HorizontalOptions="Center"/>
 
     </StackLayout>
-    
-</ContentPage>
+
+</pages:BaseContentPage>

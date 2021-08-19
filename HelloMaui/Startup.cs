@@ -4,8 +4,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Autofac;
 using HelloMaui.Services.Repository;
 using HelloMaui.ViewModels;
-using HelloMaui.Stores;
-using HelloMaui.Views;
+using HelloMaui.Pages;
 using HelloMaui.Services.Navigation;
 
 namespace HelloMaui
@@ -27,9 +26,6 @@ namespace HelloMaui
         public void RegisterTypes()
         {
             var containerBuilder = new ContainerBuilder();
-
-            containerBuilder.RegisterType<UserStore>().SingleInstance();
-            containerBuilder.RegisterType<NoteStore>().SingleInstance();
 
             containerBuilder.RegisterType<NavigationService>().As<INavigationService>();
             containerBuilder.RegisterType<RepositoryService>().As<IRepositoryService>();

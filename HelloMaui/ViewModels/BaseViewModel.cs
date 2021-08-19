@@ -1,10 +1,11 @@
-﻿using HelloMaui.Services.Navigation;
+﻿using HelloMaui.Interfaces;
+using HelloMaui.Services.Navigation;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace HelloMaui.ViewModels
 {
-    public abstract class BaseViewModel : INotifyPropertyChanged
+    public abstract class BaseViewModel : INotifyPropertyChanged, INavigationAware
     {
         public BaseViewModel(INavigationService navigationService)
         {
@@ -52,6 +53,12 @@ namespace HelloMaui.ViewModels
         {
             PropertyChanged?.Invoke(this, args);
         }
+
+        #endregion
+
+        #region -- INavigationAware implementation --
+
+        public virtual void OnNavigatedTo(object parameter) { }
 
         #endregion
     }

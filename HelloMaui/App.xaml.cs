@@ -1,4 +1,4 @@
-﻿using HelloMaui.Views;
+﻿using HelloMaui.Pages;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;

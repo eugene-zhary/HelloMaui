@@ -1,6 +1,6 @@
 ﻿using HelloMaui.Services.Navigation;
 using HelloMaui.Services.Repository;
-using HelloMaui.Views;
+using HelloMaui.Pages;
 using Microsoft.Maui.Controls;
 using System.Windows.Input;
 
@@ -29,9 +29,9 @@ namespace HelloMaui.ViewModels
 
         #region -- Private helpers --
 
-        private async void OnNavigate(object obj)
+        private async void OnNavigate()
         {
-            await NavigationService.NavigateAsync(typeof(LoginPage));
+            await NavigationService.NavigateAsync(typeof(LoginPage), "moi ahuenni parameter");
         }
 
         #endregion

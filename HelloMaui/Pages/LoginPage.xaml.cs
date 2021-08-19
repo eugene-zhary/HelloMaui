@@ -2,9 +2,9 @@
 using HelloMaui.ViewModels;
 using Microsoft.Maui.Controls;
 
-namespace HelloMaui.Views
+namespace HelloMaui.Pages
 {
-    public partial class LoginPage : ContentPage
+    public partial class LoginPage : BaseContentPage
     {
         public LoginPage()
         {

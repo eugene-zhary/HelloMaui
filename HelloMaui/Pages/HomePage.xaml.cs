@@ -2,9 +2,9 @@
 using HelloMaui.ViewModels;
 using Microsoft.Maui.Controls;
 
-namespace HelloMaui.Views
+namespace HelloMaui.Pages
 {
-    public partial class HomePage : ContentPage
+    public partial class HomePage : BaseContentPage
     {
         public HomePage()
         {
