@@ -22,6 +22,11 @@
                 <Setter Property="Padding" Value="14,10" />
             </Style>
 
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarTextColor" Value="{DynamicResource PrimaryTextColor}"/>
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource PageBackgroundColor}"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

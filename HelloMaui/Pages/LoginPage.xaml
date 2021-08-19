@@ -6,8 +6,29 @@
                        BackgroundColor="{DynamicResource PageBackgroundColor}"
                        Title="{Binding Title}">
 
-    <Label Text="{Binding Text}"
-           VerticalOptions="Center"
-           HorizontalOptions="Center"/>
-    
+    <StackLayout Padding="40, 120"
+                 Spacing="20"
+                 HorizontalOptions="Fill">
+
+        <Entry Placeholder="email"
+               Text="{Binding Email}"/>
+
+        <Entry Placeholder="password"
+               IsPassword="True"
+               Text="{Binding Password}"/>
+
+        <StackLayout Orientation="Horizontal"
+                     Spacing="100"
+                     HorizontalOptions="Center">
+
+            <Button Text="Login"
+                    Command="{Binding LoginCommand}"/>
+
+            <Button Text="Register"
+                    Command="{Binding RegisterCommand}"/>
+
+        </StackLayout>
+
+    </StackLayout>
+
 </pages:BaseContentPage>

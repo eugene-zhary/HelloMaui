@@ -6,7 +6,7 @@
 
         public static class Navigation
         {
-            public const string LOGIN = nameof(LOGIN);
+            public const string USER = nameof(USER);
         }
     }
 }

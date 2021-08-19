@@ -6,4 +6,26 @@
                        BackgroundColor="{DynamicResource PageBackgroundColor}"
                        Title="{Binding Title}">
 
+    <StackLayout Padding="40, 120"
+                 Spacing="20"
+                 HorizontalOptions="Fill">
+
+        <Label Text="Create new account!"
+               FontSize="Large"/>
+
+        <Entry Placeholder="name" 
+               Text="{Binding Name}"/>
+
+        <Entry Placeholder="email"
+               Text="{Binding Email}"/>
+
+        <Entry Placeholder="password"
+               IsPassword="True"
+               Text="{Binding Password}"/>
+
+        <Button Text="Create" HorizontalOptions="End"
+                Command="{Binding CreateCommand}"/>
+
+    </StackLayout>
+
 </pages:BaseContentPage>

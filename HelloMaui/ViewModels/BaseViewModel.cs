@@ -1,5 +1,6 @@
 ﻿using HelloMaui.Interfaces;
 using HelloMaui.Services.Navigation;
+using HelloMaui.Services.PageDialog;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -7,16 +8,18 @@ namespace HelloMaui.ViewModels
 {
     public abstract class BaseViewModel : INotifyPropertyChanged, INavigationAware
     {
-        public BaseViewModel(INavigationService navigationService)
+        public BaseViewModel(
+            INavigationService navigationService,
+            IPageDialogService pageDialogService)
         {
             NavigationService = navigationService;
+            PageDialogService = pageDialogService;
         }
 
         #region -- Public properties --
 
-        protected INavigationService NavigationService { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        protected INavigationService NavigationService { get; }
+        protected IPageDialogService PageDialogService { get; }
 
         private string _title;
         public string Title
@@ -55,6 +58,12 @@ namespace HelloMaui.ViewModels
         }
 
         #endregion
+
+        #region -- INotifyPropertyChanged implementation --
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion 
 
         #region -- INavigationAware implementation --
 

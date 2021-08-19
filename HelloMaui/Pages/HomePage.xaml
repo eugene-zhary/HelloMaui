@@ -6,12 +6,9 @@
                        BackgroundColor="{DynamicResource PageBackgroundColor}"
                        Title="{Binding Title}">
 
-    <StackLayout>
-
-        <Button Text="Go to LoginPage" 
-                Command="{Binding NavigateCommand}"
-                HorizontalOptions="Center"/>
-
-    </StackLayout>
+    <Label Text="{Binding User.Name, StringFormat='{0}, hello from MAUI!'}"
+           FontSize="Large"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"/>
 
 </pages:BaseContentPage>

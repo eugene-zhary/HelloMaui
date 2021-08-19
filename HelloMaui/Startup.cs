@@ -6,6 +6,9 @@ using HelloMaui.Services.Repository;
 using HelloMaui.ViewModels;
 using HelloMaui.Pages;
 using HelloMaui.Services.Navigation;
+using HelloMaui.Services.Authorization;
+using HelloMaui.Services.PageDialog;
+using HelloMaui.Services.Settings;
 
 namespace HelloMaui
 {
@@ -28,7 +31,10 @@ namespace HelloMaui
             var containerBuilder = new ContainerBuilder();
 
             containerBuilder.RegisterType<NavigationService>().As<INavigationService>();
+            containerBuilder.RegisterType<PageDialogService>().As<IPageDialogService>();
             containerBuilder.RegisterType<RepositoryService>().As<IRepositoryService>();
+            containerBuilder.RegisterType<AuthorizationService>().As<IAuthorizationService>();
+            containerBuilder.RegisterType<SettingsManager>().As<ISettingsManager>();
 
             containerBuilder.RegisterType<LoginViewModel>();
             containerBuilder.RegisterType<RegisterViewModel>();

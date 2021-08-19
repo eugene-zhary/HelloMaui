@@ -12,7 +12,7 @@ namespace HelloMaui
         {
             InitializeComponent();
 
-            var page = Resolver.Resolve<HomePage>() as ContentPage;
+            var page = Resolver.Resolve<LoginPage>() as ContentPage;
 
             MainPage = new NavigationPage(page);
         }
