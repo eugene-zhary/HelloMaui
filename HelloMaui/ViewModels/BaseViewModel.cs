@@ -58,7 +58,7 @@ namespace HelloMaui.ViewModels
 
         #region -- INavigationAware implementation --
 
-        public virtual void OnNavigatedTo(object parameter) { }
+        public virtual void OnNavigatedTo(INavigationParameters parameter) { }
 
         #endregion
     }

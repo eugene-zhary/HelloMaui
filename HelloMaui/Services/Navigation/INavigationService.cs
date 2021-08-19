@@ -2,7 +2,7 @@
 {
     public interface INavigationService
     {
-        Task NavigateAsync(Type pageType, object parameter = null);
+        Task NavigateAsync(Type pageType, INavigationParameters navigationParameters = null);
         Task GoBackAsync();
     }
 }

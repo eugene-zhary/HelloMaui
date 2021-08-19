@@ -1,7 +1,9 @@
-﻿namespace HelloMaui.Interfaces
+﻿using HelloMaui.Services.Navigation;
+
+namespace HelloMaui.Interfaces
 {
     public interface INavigationAware
     {
-        void OnNavigatedTo(object parameter);
+        void OnNavigatedTo(INavigationParameters parameter);
     }
 }

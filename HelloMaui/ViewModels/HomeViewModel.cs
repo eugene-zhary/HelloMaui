@@ -31,7 +31,10 @@ namespace HelloMaui.ViewModels
 
         private async void OnNavigate()
         {
-            await NavigationService.NavigateAsync(typeof(LoginPage), "moi ahuenni parameter");
+            NavigationParameters navParams = new();
+            navParams.Add(Constants.Navigation.LOGIN, "moi ahuenni parameter");
+
+            await NavigationService.NavigateAsync(typeof(LoginPage), navParams);
         }
 
         #endregion

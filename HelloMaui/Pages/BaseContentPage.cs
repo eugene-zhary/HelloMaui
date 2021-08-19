@@ -1,15 +1,21 @@
 ﻿using HelloMaui.Interfaces;
+using HelloMaui.Services.Navigation;
 using Microsoft.Maui.Controls;
 
 namespace HelloMaui.Pages
 {
     public abstract class BaseContentPage : ContentPage
     {
-        public void SendParameter(object parameter)
+        public void SendParameter(INavigationParameters navigationParameters)
         {
             if (BindingContext is INavigationAware navigationAware)
             {
-                navigationAware.OnNavigatedTo(parameter);
+                if (navigationParameters is null)
+                {
+                    navigationParameters = new NavigationParameters();
+                }
+
+                navigationAware.OnNavigatedTo(navigationParameters);
             }
         }
 

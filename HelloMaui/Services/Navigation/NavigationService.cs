@@ -19,14 +19,13 @@ namespace HelloMaui.Services.Navigation
             return CurrentPage.Navigation.PopAsync();
         }
 
-        public Task NavigateAsync(Type pageType, object parameter = null)
+        public Task NavigateAsync(Type pageType, INavigationParameters navigationParameters = null)
         {
             Page target = Activator.CreateInstance(pageType) as Page;
 
-            if (parameter != null
-                && target is BaseContentPage contentPage)
+            if (target is BaseContentPage contentPage)
             {
-                contentPage.SendParameter(parameter);
+                contentPage.SendParameter(navigationParameters);
             }
 
             return CurrentPage.Navigation.PushAsync(target);

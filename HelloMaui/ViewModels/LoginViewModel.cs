@@ -21,14 +21,12 @@ namespace HelloMaui.ViewModels
         #endregion
 
         #region -- Overrides --
-        
-        public override void OnNavigatedTo(object parameter)
-        {
-            base.OnNavigatedTo(parameter);
 
-            if (parameter is string str)
+        public override void OnNavigatedTo(INavigationParameters parameter)
+        {
+            if (parameter.TryGetValue(Constants.Navigation.LOGIN, out string text))
             {
-                Text = str;
+                Text = text;
             }
         }
 
